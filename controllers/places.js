@@ -14,17 +14,18 @@ router.get('/', (req, res) => {
         cuisines: 'bubble tea',
         pic: '/images/vivi-boba.jpg'
       }]
-      
-      router.post('/', (req, res) => {
-        console.log(req.body)
-        res.send('POST /places')
-      })
-      
+      res.render('places/index', { places })
+ 
 
   })
   
-  router.get('/new', (req, res) => {
-    res.render('places/new')
+router.get('/new', (req, res) => {
+  res.render('places/new')
+  })
+
+router.post('/', (req, res) => {
+  console.log(req.body)
+  res.send('POST /places')
   })
 module.exports = router
 
