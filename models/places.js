@@ -2,7 +2,7 @@ module.exports = [{
     name: 'Semicolon Cafe',
     city: 'New York',
     state: 'NY',
-    cuisines: 'cafe, sandwiches',
+    cuisines: 'coffee, sandwiches',
     pic: '/images/semicoloncafe.jpg'
   }, {
     name: 'ViVi Bubble Tea',
