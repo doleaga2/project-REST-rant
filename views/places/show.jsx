@@ -7,11 +7,20 @@ function show (data) {
           <main>
             <div className="container mt-5">  
             <div className="row align-items-center"> <div className="col"><img src= {data.place.pic} alt={data.place.name} />
+            <h3>
+              Located in {data.place.city}, {data.place.state}
+            </h3>
                 </div>
             <div className="col"><h1>{data.place.name}</h1><h2>Rating</h2>
             <p>Not Rated</p>
             <h2>Description</h2>
-            <p>Located in {data.place.city},{data.place.state} and serving {data.place.cuisines}</p></div>
+            <h3>
+          {data.place.showEstablished()}
+        </h3>
+        <h4>
+          Serving {data.place.cuisines}
+        </h4>
+            </div>
             
             <h2>Comments</h2>
             <p>No comments yet!</p> 
@@ -39,3 +48,7 @@ function show (data) {
 }
 
 module.exports = show
+
+
+
+      
