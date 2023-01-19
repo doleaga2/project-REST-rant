@@ -17,8 +17,11 @@ const Def = require('../default')
               <stong>- {c.author}</stong>
             </h3>
             <h4>Rating: {c.stars}</h4>
+
           </div>
+          
         )
+
       })
     }
     return (
@@ -43,6 +46,46 @@ const Def = require('../default')
             
             <h2>Comments</h2>
             {comments} 
+{/* implementing the comment form  */}
+<form method="POST" action={`/places/${data.id}?_method=POST`}>
+
+<div className="form-group">
+    <label htmlFor="author">author</label>
+    <input className="form-control" id="author" name="author" />
+  </div>
+
+  <div className="form-group">
+    <label htmlFor="content">content</label>
+    <input className="form-control" id="content" name="content" />
+  </div>
+
+  <div className="form-check">
+    <label htmlFor="rant">Rant?</label>
+  <input className="form-check-input" type="checkbox" id="rant" name="rant" value="rant" checked>
+ 
+</div>
+
+  <div className='form-group'>
+<label htmlFor='stars'>Star Rating</label>
+<input
+className='form-control'
+id='stars'
+name='stars'
+type='range'
+step='0.5'
+min='0'
+max='5'
+/>
+</div>
+  <input className="btn btn-primary" type="submit" value="Add Comment" />
+</form>
+
+
+
+
+
+
+
 
             <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
   Edit
@@ -53,10 +96,7 @@ const Def = require('../default')
     Delete
   </button>
 </form> 
-   
-
-
-
+  
         </div> 
            </div>
            
