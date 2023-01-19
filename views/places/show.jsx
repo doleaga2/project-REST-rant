@@ -61,7 +61,7 @@ const Def = require('../default')
 
   <div className="form-check">
     <label htmlFor="rant">Rant?</label>
-  <input className="form-check-input" type="checkbox" id="rant" name="rant" value="rant" checked>
+  <input className="form-check-input" type="checkbox" id="rant" name="rant" value="rant" checked> </input>
  
 </div>
 
