@@ -47,7 +47,7 @@ const Def = require('../default')
             <h2>Comments</h2>
             {comments} 
 {/* implementing the comment form  */}
-<form method="POST" action={`/places/${data.id}?_method=POST`}>
+<form method="POST" action={`/places/${data.place.id}?_method=POST`}>
 
 <div className="form-group">
     <label htmlFor="author">author</label>
@@ -61,7 +61,13 @@ const Def = require('../default')
 
   <div className="form-check">
     <label htmlFor="rant">Rant?</label>
-  <input className="form-check-input" type="checkbox" id="rant" name="rant" value="rant" checked> </input>
+    <input
+className='form-check-input'
+type='checkbox'
+id='rant'
+name='rant'
+defaultChecked
+/>
  
 </div>
 
