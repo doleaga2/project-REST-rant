@@ -47,7 +47,7 @@ const Def = require('../default')
             <h2>Comments</h2>
             {comments} 
 {/* implementing the comment form  */}
-<form method="POST" action={`/places/${data.place.id}?_method=POST`}>
+<form action={`/places/${data.place.id/comment} method= POST`}>
 
 <div className="form-group">
     <label htmlFor="author">author</label>
